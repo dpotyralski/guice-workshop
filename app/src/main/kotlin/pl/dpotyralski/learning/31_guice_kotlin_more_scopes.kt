@@ -4,17 +4,14 @@ package pl.dpotyralski.learning
 
 // fun main() {
 //    val injector = Guice.createInjector(MyFirstModule())
-//    val service =
-//        injector.getInstance<MySuperService>()
+//    val service = injector.getInstance<MySuperService>()
 //    service.sayHello()
 // }
 //
-// class MyFirstModule : KotlinModule() {
+// class MyFirstModule : KotlinPrivateModule() {
 //    override fun configure() {
-//        // Avoid using .toInstance with objects that are complicated to create, since it can slow down application startup. You can use an @Provides method instead.
-//        bind<ConfigurationProvider>().toInstance(S3ConfigurationProvider())
-//        bind<String>().annotatedWith(Names.named("option")).toInstance("s3")
-// //        bind<String>().toInstance("s3x")
+//        bind<ConfigurationProvider>().to<S3ConfigurationProvider>()
+//        expose<ConfigurationProvider>()
 //    }
 // }
 //
@@ -32,10 +29,8 @@ package pl.dpotyralski.learning
 //    @Inject
 //    constructor(
 //        private val config: ConfigurationProvider,
-//        private val storage: String,
 //    ) {
 //        fun sayHello() {
-//            println(storage)
 //            println(config.getHelloMessage())
 //        }
 //    }

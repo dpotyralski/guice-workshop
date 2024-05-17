@@ -4,14 +4,14 @@ package pl.dpotyralski.learning
 
 // fun main() {
 //    val injector = Guice.createInjector(MyFirstModule())
-//    val service =
-//        injector.getInstance<MySuperService>()
+//    val service = injector.getInstance<MySuperService>()
 //    service.sayHello()
 // }
 //
-// class MyFirstModule : KotlinModule() {
+// class MyFirstModule : KotlinPrivateModule() {
 //    override fun configure() {
-//        bind<String>().annotatedWith(Names.named("option")).toInstance("s3")
+//        bind<ConfigurationProvider>().to<S3ConfigurationProvider>()
+//        expose<ConfigurationProvider>()
 //    }
 // }
 //
