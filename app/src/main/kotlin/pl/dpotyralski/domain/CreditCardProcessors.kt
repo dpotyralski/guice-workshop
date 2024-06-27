@@ -14,3 +14,13 @@ class PaypalCreditCardProcessor : CreditCardProcessor {
         return ChargeResult.success()
     }
 }
+
+class StripeCreditCardProcessor : CreditCardProcessor {
+    override fun charge(
+        creditCard: CreditCard,
+        amount: BigDecimal,
+    ): ChargeResult {
+        println("Charging $creditCard for $amount")
+        return ChargeResult.success()
+    }
+}

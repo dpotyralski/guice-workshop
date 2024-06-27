@@ -1,14 +1,7 @@
 package pl.dpotyralski.learning
 
-import com.google.common.truth.Truth.assertThat
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
-import pl.dpotyralski.domain.CreditCard
-import pl.dpotyralski.domain.PizzaOrder
-import pl.dpotyralski.domain.Receipt
-import java.math.BigDecimal
-
 class BillingServiceTest {
+    /*
     private val billingService = BillingService()
 
     @BeforeEach
@@ -41,4 +34,6 @@ class BillingServiceTest {
         // then
         assertThat(chargeOrder).isEqualTo(Receipt.Failure("Insufficient funds"))
     }
+
+     */
 }

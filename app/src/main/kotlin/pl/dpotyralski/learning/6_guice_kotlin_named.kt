@@ -6,6 +6,7 @@ package pl.dpotyralski.learning
 //    val injector = Guice.createInjector(MyFirstModule())
 //    val service =
 //        injector.getInstance<MySuperService>()
+//
 //    service.sayHello()
 // }
 //
@@ -35,7 +36,7 @@ package pl.dpotyralski.learning
 // class MySuperService
 //    @Inject
 //    constructor(
-//        @Named("local") private val config: ConfigurationProvider,
+//        @Named("s3") private val config: ConfigurationProvider,
 //    ) {
 //        fun sayHello() {
 //            println(config.getHelloMessage())

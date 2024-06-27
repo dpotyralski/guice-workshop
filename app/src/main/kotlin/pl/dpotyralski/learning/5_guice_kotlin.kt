@@ -2,11 +2,6 @@
 
 package pl.dpotyralski.learning
 
-// import com.google.inject.Guice
-// import dev.misfitlabs.kotlinguice4.KotlinModule
-// import dev.misfitlabs.kotlinguice4.getInstance
-// import jakarta.inject.Inject
-//
 // fun main() {
 //    val injector = Guice.createInjector(MyFirstModule())
 //    val service = injector.getInstance<MySuperService>() // getInstance is a helper method that simplifies the creation of instances

@@ -17,15 +17,15 @@ package pl.dpotyralski.learning
 //
 // class MyFirstModule : KotlinModule() {
 //    override fun configure() {
-//        bind<ConfigurationProvider>().to<S3ConfigurationProvider>()
+//        bind<ConfigurationPotato>().to<S3ConfigurationProvider>().`in`<Singleton>()
 //    }
 // }
 //
-// interface ConfigurationProvider {
+// interface ConfigurationPotato {
 //    fun getHelloMessage(): String
 // }
 //
-// class S3ConfigurationProvider : ConfigurationProvider {
+// class S3ConfigurationProvider : ConfigurationPotato {
 //    override fun getHelloMessage(): String {
 //        return "Hello World from S3"
 //    }
@@ -34,7 +34,7 @@ package pl.dpotyralski.learning
 // class MySuperService
 //    @Inject
 //    constructor(
-//        private val config: ConfigurationProvider,
+//        private val config: ConfigurationPotato,
 //    ) {
 //        fun sayHello() {
 //            println("Config provider " + config)
@@ -45,10 +45,14 @@ package pl.dpotyralski.learning
 // class AnotherService
 //    @Inject
 //    constructor(
-//        private val config: ConfigurationProvider,
+//        private val config: ConfigurationPotato,
 //    ) {
 //        fun sayHello() {
 //            println("Config provider " + config)
 //            println(config.getHelloMessage())
 //        }
 //    }
+//
+// fun ScopedBindingBuilder.asSingleton() {
+//    this.`in`(Scopes.SINGLETON)
+// }

@@ -2,26 +2,22 @@
 
 package pl.dpotyralski.learning
 
+// SOLID - Dependency Inversion Principle
+//
+// IoC
+// DI
+// DIP
+
 // fun main() {
-//    val order = PizzaOrder(BigDecimal("140"))
-//    val creditCard = CreditCard("0000 1111 2222 3333 4444", "12/24", "123")
-//
 //    val paypalCreditCardProcessor = PaypalCreditCardProcessor()
-//    val databaseTransactionLog = DatabaseTransactionLog()
+//    val dataDogTransactionLog = DataDogTransactionLog()
 //
-//    val service = BillingService(paypalCreditCardProcessor, databaseTransactionLog)
-//
-//    val receipt: Receipt = service.chargeOrder(order, creditCard)
-//    if (receipt is Receipt.Success) {
-//        println("Payment successful")
-//    } else {
-//        println("Payment failed")
-//    }
+//    val service = BillingService(paypalCreditCardProcessor, dataDogTransactionLog)
 // }
 //
 // class BillingService(
-//    private val processor: CreditCardProcessor,
-//    private val transactionLog: TransactionLog,
+//    private val processor: CreditCardProcessor, // interface
+//    private val transactionLog: TransactionLog, // interface
 // ) {
 //    fun chargeOrder(
 //        order: PizzaOrder,

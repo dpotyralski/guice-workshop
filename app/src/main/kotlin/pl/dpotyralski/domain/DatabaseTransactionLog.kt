@@ -11,3 +11,13 @@ class DatabaseTransactionLog : TransactionLog {
         println("Connect exception logged in database")
     }
 }
+
+class DataDogTransactionLog : TransactionLog {
+    override fun logChargeResult(result: ChargeResult) {
+        println("Charge result logged in database")
+    }
+
+    override fun logConnectException(e: ConnectException) {
+        println("Connect exception logged in database")
+    }
+}
